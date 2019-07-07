@@ -9,7 +9,7 @@ console.log(chalk.blue(message))
 
 console.log(chalk.green.bold.inverse("Success!"))
 
-console.log(chalk.dim.blue("test"))
+console.log(chalk.dim.blue("testy"))
 
 console.log(validator.isEmail('blank@blank.com'))
 console.log(validator.isURL('rryoung.com'))
