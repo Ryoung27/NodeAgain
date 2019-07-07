@@ -1,6 +1,18 @@
-const fs = require('fs')
+const getNotes = require('./notes.js')
+
+const message = getNotes()
 
 
-fs.writeFileSync('notes.txt', 'My name is Ronnie.')
+console.log(message)
 
-fs.appendFileSync('notes.txt', ' This was the challenge. That doesn\'t add spaces.')
+
+
+
+// const name = require('./utils.js')
+// const add = require('./utils.js')
+
+
+// const sum = add(4, -2)
+// console.log(name)
+// console.log(add(1,3))
+// console.log(sum)
