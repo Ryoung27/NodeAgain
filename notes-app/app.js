@@ -66,7 +66,7 @@ yargs.command({
         }
     },
     handler(){
-        console.log('Print the list.')
+        notes.readNotes()
     }
 })
 
