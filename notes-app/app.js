@@ -21,7 +21,7 @@ yargs.command({
         }
     },
     handler(argv){
-        notes.addNote(argv.title, argv.body)
+        notes.listNotes(argv.title, argv.body)
     }
 })
 
@@ -51,7 +51,7 @@ yargs.command({
         }
     },
     handler(){
-        console.log('Show the list.')
+        notes.listNotes()
     }
 })
 
