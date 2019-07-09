@@ -26,6 +26,24 @@ const addNote = function(title, body){
     }
 }
 
+const removeNote = function(title){
+    const notes = loadNotes()
+    const notesToKeep = notes.filter(function(note){
+        return note.title !== title})
+    if(notesToKeep.length < notes.length){
+        notes.pop({
+            title: title,
+            })
+        
+            saveNotes(notesToKeep)
+            console.log(chalk.bgGreen("Note removed!"))
+
+    }else{
+        console.log(chalk.bgRed("Note not removed!"))
+    }
+
+}
+
 
 const saveNotes = function(notes){
     const dataJSON = JSON.stringify(notes)
@@ -47,5 +65,6 @@ const loadNotes = function(){
 module.exports = {
     getNotes: getNotes,
     addNote: addNote,
+    removeNote: removeNote
 
 }
